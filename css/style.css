@@ -1,0 +1,25 @@
+body{
+background: #83a4d4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
+  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b6fbff, #83a4d4);
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.responsive{
+    /* logo to adjust size with width*/
+    max-width:75%;
+    height:auto;
+}
+
+.displayBox{
+
+    width:100%;  /* full viewport width*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.scroll-box{
+    overflow-y: scroll;  /* create vertical scroll bar when content overflows*/
+}
