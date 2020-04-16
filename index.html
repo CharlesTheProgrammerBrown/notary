@@ -11,32 +11,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div container>
+    <div class="container">
         <!--MAIN AREA-->
-    <div class = "col-md-8">
-    <img src="img/NotoryLogowhiteMed.png" class="responsive">
-    <div class="card mb-4">
-    
-            <h2 class="card-header" id="fileName">Book Title
-            </h2>
-            <div class="card-body">
-                <div class="displayBox scroll-box" id="fileContent">
-                Select a book on the right
-                </div>
-            <div class="card-footer text-muted">
-                Footer
-                </div>
-            
+        <div class="row">
+            <div class = "col-md-8">
+                    <img src="img/NotoryLogowhiteMed.png" class="responsive">
+                        <div class="card mb-4">
+                            <h2 class="card-header" id="fileName">Book Title
+                            </h2>
+                            <div class="card-body">
+                                <div class="displayBox scroll-box" id="fileContent">
+                                 Select a book on the right
+                                </div>
+                               <div class="card-footer text-muted justify-content-center">
+                                 Footer
+                               </div>
+                            </div>
+                       </div>
             </div>
-   </div>
-   </div>
 
-          <!--Sidebar-->
-         <div class="col-md-4">
+            <!--Sidebar-->
+           <div class="col-md-4">
+              <!--Search widget-->
+              <div class="card my-4">
 
-           <!--Search widget-->
-           <div class="card my-4">
                <h5 class="card-header">Book Search</h5>
+
                <div class="card-body">
                    <div class="input-group">
                       <input type="text" class="form-control" id="keyword" placeholder="Search for...">
@@ -45,16 +45,15 @@
                       </span>
                     </div>
 
-                 <div class="card-footer" id="searchstat">Footer
+                 <div class="card-footer" id="searchstat">
                  </div>
              </div>
+              </div>
 
-            </div>
-
-            <!--Library-->
-            <div class="card my-4">
-                    <h5 class="card-header">Library</h5>
-                    <div class="card-body">
+               <!--Library-->
+               <div class="card my-4">
+                <h5 class="card-header">Library</h5>
+                <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
                              <ul class="list-unstyled mb-0">
@@ -65,12 +64,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+               </div>
 
-            <!--Most Used Words-->
+                <!--Most Used Words-->
                 <div class="card my-4">
-                    <h5 class="card-header">Most Frequent Words</h5>
-                    <div class="card-body">
+                <h5 class="card-header">Most Frequent Words</h5>
+                <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="list-unstyled mb-0" id="freqWords">
@@ -78,40 +77,41 @@
                             </ul>
                         </div>
                     </div>
-                    </div>
+                </div>
                 </div>
             
-             <!--Least Used Words-->   
-             <div class="card my-4">
-                 <h5 class="card-header">Least Used Words</h5>
-                 <div class="card-body">
-                     <div class="row">
-                         <div class="col-md-12">
-                             <ul class="list-unstyled mb-0" id="leastfreq">
+                <!--Least Used Words-->   
+                <div class="card my-4">
+            <h5 class="card-header">Least Used Words</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-unstyled mb-0" id="leastfreq">
                                  
-                             </ul>
-                         </div>
-                     </div>
-
-                 </div>
-        </div>
-
-         <!--Book Stats-->   
-         <div class="card my-4">
-            <h5 class="card-header">Book Stats</h5>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="list-unstyled mb-0">
-                            <li id="docLength"></li>
-                            <li id="wordCount"></li>
-                            <li id="charCount"></li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+
+                </div>
                 </div>
 
+                 <!--Book Stats-->   
+                <div class="card my-4">
+            <h5 class="card-header">Book Stats</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                           <ul class="list-unstyled mb-0">
+                              <li id="docLength"></li>
+                              <li id="wordCount"></li>
+                              <li id="charCount"></li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
-   </div>
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
