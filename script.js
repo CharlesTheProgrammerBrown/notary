@@ -32,7 +32,7 @@ function loadBooks(fileName, displayName)
   //  3- loading the file back
  //   4 - done, load from file complete
 
-      //status - 200 is okay,404 not found, 403 Forbidden
+      //request status - 200 is okay,404 not found, 403 Forbidden
              if(xhr.readyState == 4 && xhr.status == 200){
                  currentBook = xhr.responseText;
 
