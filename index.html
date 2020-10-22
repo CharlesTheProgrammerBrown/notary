@@ -1,119 +1,129 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Notary- Free books</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/SearchString.js"></script>
 
-    <script src="script.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-        <!--MAIN AREA-->
-        <div class="row">
-            <div class = "col-md-8">
-                    <img src="img/NotoryLogowhiteMed.png" class="responsive">
-                        <div class="card mb-4">
-                            <h2 class="card-header" id="fileName">Book Title
-                            </h2>
-                            <div class="card-body">
-                                <div class="displayBox scroll-box" id="fileContent">
-                                 Select a book on the right
+      <div class="container">
+            <div class="row">
+                <!--Main content area,book,logo-->
+                <div class="col-md-8">
+                  <img src="img/NotoryLogowhiteMed.png" class="responsive">
+                      <div class="card mb-4">
+                          <h2 class="card-header" id="fileName">
+                              Book Title
+                          </h2>
+                          <div class="card-body">
+                              <div class="displayBox scroll-box" id="fileContent">
+                                  Select a book on the right
+                              </div>
+                          </div>
+                          <div class="card-footer text-muted">
+                              One stop shop for easy reading!
+                          </div>
+                        </div>
+                </div>
+                  
+                <!--SideBar content-->
+                <div class="col-md-4"> 
+
+              <!------------Search widget--------------->
+                          <div class="card my-4">
+                                <h5 class="card-header"> Search</h5>
+                                <div class="card-body">
+                                  <div class="input-group">
+                                    
+                                    <input type="text" class="form-control" name="name" id="keyword" placeholder="Search for..." >
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-secondary" type="button" >Search</button>
+                                    </span>
+                                  </div>
+
+                                <div class="card-footer text-muted" id="searchstat">
                                 </div>
-                               <div class="card-footer text-muted justify-content-center">
-                                 <p style="text-align: center;">Happy reads :D</p> 
-                               </div>
+                              </div>
+                          </div>
+
+              <!------------Book widget--------------->
+                          <div class="card my-4">
+                            <h5 class="card-header">Select Book</h5>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <ul class="list-unstyled mb-0">
+                                      <li><a href="#" onclick="loadBook('Pride_and_Prejudice.txt', 'Pride and Prejudice')"> Pride and Prejudice</a></li>
+                                      <li><a href="#" onclick="loadBook('The_Yellow_Wallpaper.txt','The Yellow Wallpaper')">Yellow Wallpaper</a></li>
+                                      <li><a href="#" onclick="loadBook('A Tale of Two Cities.txt', 'A Tale of Two Cities')">A Tale of Two Cities</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+
+              <!------------Most frequent widget--------------->
+                          <div class="card my-4">
+                            <h5 class="card-header">Most Frequent Words</h5>
+                            <div class="card-body">
+
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <!--to be inserted dynamically-->
+                                  <ul class="list-unstyled mb-0" id="mostUsed">
+                                  
+                                </ul>
+                                </div>
+                              </div>
                             </div>
-                       </div>
-            </div>
+                          </div>
 
-            <!--Sidebar-->
-           <div class="col-md-4">
-              <!--Search widget-->
-              <div class="card my-4">
 
-               <h5 class="card-header">Book Search</h5>
+              <!------------Least frequent widget--------------->     
+                          <div class="card my-4">
+                            <h5 class="card-header">Least Frequent Words</h5>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <ul class="list-unstyled mb-0" id="leastUsed">
+                                    
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
-               <div class="card-body">
-                   <div class="input-group">
-                      <input type="text" class="form-control" id="keyword" placeholder="Search for...">
-                      <span class="input-group-btn">
-                        <button class="btn btn-secondary">Search</button>
-                      </span>
-                    </div>
-
-                 <div class="card-footer" id="searchstat">
-                 </div>
-             </div>
-              </div>
-
-               <!--Library-->
-               <div class="card my-4">
-                <h5 class="card-header">Library</h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                             <ul class="list-unstyled mb-0">
-                                <li><a href="#" onclick="loadBooks('Pride_and_Prejudice.txt','Pride and Prejudice')">Pride and Prejudice</a></li>
-                                <li><a href="#" onclick="loadBooks('The_Yellow_Wallpaper.txt','The Yellow Wallpaper')">The Yellow Wallpaper</a></li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               </div>
-
-                <!--Most Used Words-->
-                <div class="card my-4">
-                <h5 class="card-header">Most Frequent Words</h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="list-unstyled mb-0" id="freqWords">
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            
-                <!--Least Used Words-->   
-                <div class="card my-4">
-            <h5 class="card-header">Least Used Words</h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="list-unstyled mb-0" id="leastfreq">
-                                 
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+              <!------------Book stats widget---------------> 
+                          <div class="card my-4">
+                            <h5 class="card-header"> Book stats</h5>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <ul class="list-unstyled mb-0">
+                                  <li id="docLength"></li>
+                                  <li id="wordCount"></li>
+                                  <li id="charCount"></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                 </div>
 
-                 <!--Book Stats-->   
-                <div class="card my-4">
-            <h5 class="card-header">Book Stats</h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                           <ul class="list-unstyled mb-0">
-                              <li id="docLength"></li>
-                              <li id="wordCount"></li>
-                              <li id="charCount"></li>
-                           </ul>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+           </div>
     </div>
+    <script id="template-ul-items" type="text/template">
+      <li>
+        {{val}}
+      </li>
+    </script>
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
