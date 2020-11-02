@@ -43,7 +43,7 @@
                                     
                                     <input type="text" class="form-control" name="name" id="keyword" placeholder="Search for..." >
                                     <span class="input-group-btn">
-                                      <button class="btn btn-secondary" type="button" >Search</button>
+                                      <button class="btn btn-secondary" type="button" onclick="performMark()" >Search</button>
                                     </span>
                                   </div>
 
@@ -59,9 +59,11 @@
                                 <div class="row">
                                   <div class="col-md-12">
                                     <ul class="list-unstyled mb-0">
+                                      <li><a href="#" onclick="loadBook('ALICE\'S ADVENTURES IN WONDERLAND.txt', 'Alice\'s Adventures in Wonderland')">Alice's Adventures in Wonderland</a></li>
+                                      <li><a href="#" onclick="loadBook('A Tale of Two Cities.txt', 'A Tale of Two Cities')">A Tale of Two Cities</a></li>
                                       <li><a href="#" onclick="loadBook('Pride_and_Prejudice.txt', 'Pride and Prejudice')"> Pride and Prejudice</a></li>
                                       <li><a href="#" onclick="loadBook('The_Yellow_Wallpaper.txt','The Yellow Wallpaper')">Yellow Wallpaper</a></li>
-                                      <li><a href="#" onclick="loadBook('A Tale of Two Cities.txt', 'A Tale of Two Cities')">A Tale of Two Cities</a></li>
+                                      <li><a href="#" onclick="loadBook('LOTR.txt', 'LOTR')">Lord of The Rings</a></li>
                                     </ul>
                                   </div>
                                 </div>
@@ -90,7 +92,7 @@
                             <h5 class="card-header">Least Frequent Words</h5>
                             <div class="card-body">
                               <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-lg-12">
                                   <ul class="list-unstyled mb-0" id="leastUsed">
                                     
                                   </ul>
